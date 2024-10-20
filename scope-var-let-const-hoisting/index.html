@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>This is Scope page</title>
+</head>
+
+<body>
+
+  <h1>Hellow world</h1>
+
+</body>
+<script>
+  // var globalVar = "I am global scope";  // global scope
+  // function showGlobal() {
+  //   console.log(globalVar);  // can access globalVar
+  // }
+
+  // showGlobal();  // Output: I am global scope
+
+
+  // function functionScope() {
+  //   var localVar = "I am local";  // function scope
+  //   console.log(localVar);  // accessible inside function
+  // }
+
+  // functionScope();
+  // console.log(localVar);  // Error: localVar is not defined
+
+  // if (true) {
+  //   let blockScoped = "I am block-scoped";
+  //   const anotherBlockScoped = "I am also block-scoped";
+  //   console.log(blockScoped);  // accessible inside block
+  // }
+
+  // console.log(blockScoped);  // Error: blockScoped is not defined
+
+  // scope chain in JavaScript
+  let globalVar = "Global";
+  function outer() {
+    let outerVar = "Outer";
+
+    function inner() {
+      let innerVar = "Inner";
+      console.log(innerVar);  // Inner
+      console.log(outerVar);  // Outer
+      console.log(globalVar);  // Global
+    }
+    inner();
+  }
+  outer();
+</script>
+
+</html>
